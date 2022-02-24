@@ -27,5 +27,5 @@ CREATE TABLE mvp_artists (
     style_one VARCHAR(100)
 );
 INSERT INTO mvp_artists (first_name, last_name, pronouns, email, instagram, studio, city, pricepoint, style_one)
-    VALUES ('Indigo', 'Erlandsson', 'She/Her', 'email@email.com', '@indi_blue_tattoos', 'Independent Artist', 'London', '£150', 'Black & Grey');
+    VALUES ('Indigo', 'Erlandsson', 'She/Her', 'email@email.com', '@indi_blue_tattoos', 'Independent Artist', 'London', '£150', 'Portrait');
     

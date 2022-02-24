@@ -30,7 +30,7 @@ router.get("/:id", async (req, res, next) => {
   }
 });
 
-//PUT modified user by id
+//PUT modify user by id
 router.put("/:id", async (req, res) => {
   let { id } = req.params;
   try {
@@ -59,6 +59,7 @@ router.put("/:id", async (req, res) => {
     res.status(500).send({ error: err.message });
   }
 });
+
 
 
 

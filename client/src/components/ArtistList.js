@@ -5,7 +5,7 @@ function ArtistList(props) {
     <ul className="ArtistList">
       {props.theArtists.map(a => (
         <li key={a.id}>
-          {a.first_name} {a.last_name}, {a.pronouns}, {a.city}, Style: {a.style_one}
+          {a.first_name} {a.last_name}, {a.pronouns}, {a.city}, Styles: {a.style_one} {a.style_two} {a.style_three}
         </li>
       ))}
     </ul>
