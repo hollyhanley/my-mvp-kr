@@ -4,7 +4,12 @@ import ArtistList from "../components/ArtistList";
 function Dashboard(props) {
     let [artists, setArtists] = useState([]);
 
-  useEffect(() => {
+  useEffect(() => { 
+    /* currently loads full artist list. 
+    Want to take updated user info with form preferences on this page
+    Do a compare of data where artist city, price, style matches users city, price, style
+    Would like them in card format to display details with profile pic and photos
+    At top of page will be display of user info - Need to set user state?*/
     getArtists();
   }, []);
 

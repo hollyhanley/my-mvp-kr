@@ -3,26 +3,24 @@ import React, { useState } from "react";
 const blankForm = {
   city: "",
   pricepoint: "",
-  style_one: ""
+  style_one: "",
+  style_two: "",
+  style_three: ""
 };
 
-const userObj = {
-  city: "",
-  pricepoint: "",
-  style_one: ""
-};
-
-function UserForm(props) {
-  const [formData, setFormData] = useState(blankForm); // change this to user/set user? User object?
-
+function UserForm({handleChange, handleSubmit, formData }) {
+  
 
   return (
+    // instead of dropdowns for style, can I have cards with onClicks?
+    // Linking to db with booleans for all styles?
     <div className="UserForm">
     <form onSubmit={handleSubmit}>
       <label> Select Your City
           <select name="city" 
           value={formData.city}
           onChange={handleChange}>
+              <option></option>
               <option>Belfast</option>
               <option>Birmingham</option>
               <option>Bristol</option>
@@ -46,6 +44,7 @@ function UserForm(props) {
           <select name="pricepoint" 
           value={formData.pricepoint}
           onChange={handleChange}>
+              <option></option>
               <option>Under £100</option>
               <option>£100 - £200</option>
               <option>Any</option>
@@ -53,13 +52,15 @@ function UserForm(props) {
       </label>
       <br></br>
 
-      <label> Style 1
+      <label> Style
           <select name="style_one" 
           value={formData.style_one}
           onChange={handleChange}>
+              <option></option>
               <option>Portrait</option>
               <option>Japanese</option>
               <option>New School</option>
+              <option>Old School</option>
               </select>
       </label>
       <br></br>

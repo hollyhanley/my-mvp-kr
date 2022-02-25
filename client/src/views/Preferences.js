@@ -1,9 +1,22 @@
 import React, { useEffect, useState } from "react";
 import UserForm from '../components/UserForm';
 
-function Preferences() {
+  
+  const userObj = {
+    id: 1,
+    first_name: "Kezi",
+    last_name: "Rose",
+    pronouns: "She/Her",
+    email: "email@email.com",
+    city: "",
+    pricepoint: "",
+    style_one: ""
+  };
 
-    let [user, setUser] = useState({});
+function Preferences(props) {
+
+    // let [user, setUser] = useState(userObj);
+    const [formData, setFormData] = useState(userObj);
 
     useEffect(() => {
     getUserId();
@@ -16,8 +29,8 @@ function Preferences() {
     
       function handleSubmit(event) {
         event.preventDefault();
-        props.addPreferencesCb(formData);
-        setFormData(blankForm);
+        addPreferences(formData);
+        setFormData(userObj);
       }
 
     async function getUserId(userId) {
@@ -28,7 +41,7 @@ function Preferences() {
             let response = await fetch('/users/1', options);
             if (response.ok) {
                 let data = await response.json();
-                setUser(data);
+                // setUser(data);
             } else {
                 console.log('Server error', response.statusText);
             }
@@ -45,10 +58,10 @@ function Preferences() {
           body: JSON.stringify(userPreferences)
         }
         try {
-            let response = await fetch('/users', options);
+            let response = await fetch('/users/1', options);
             if (response.ok) {
                 let data = await response.json();
-                setUser(data);
+                // setUser(data); redirect to dashboard page
             } else {
                 console.log('Server error', response.statusText);
             }
@@ -60,7 +73,7 @@ function Preferences() {
     return (
         <div className="Preferences">
         <h2>Choose your preferences</h2>
-        <UserForm handleSubmit={addPreferences}/>
+        <UserForm handleSubmit={handleSubmit} handleChange={handleChange} formData={formData}/>
         </div>
     );
 }
