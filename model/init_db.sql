@@ -18,6 +18,8 @@ CREATE TABLE mvp_artists (
     first_name VARCHAR(100),
     last_name VARCHAR(100),
     pronouns VARCHAR(50),
+    profile_pic text,
+    cover_photo text,
     email VARCHAR(100),
     instagram VARCHAR(100),
     studio VARCHAR(100),
@@ -25,8 +27,8 @@ CREATE TABLE mvp_artists (
     pricepoint VARCHAR(50),
     style_one VARCHAR(100)
 );
-INSERT INTO mvp_artists (first_name, last_name, pronouns, email, instagram, studio, city, pricepoint, style_one)
-    VALUES ('Indigo', 'Erlandsson', 'She/Her', 'email@email.com', '@indi_blue_tattoos', 'Independent Artist', 'London', '£150', 'Fineline');
+INSERT INTO mvp_artists (first_name, last_name, pronouns, profile_pic, cover_photo, email, instagram, studio, city, pricepoint, style_one)
+    VALUES ('Indigo', 'Erlandsson', 'She/Her', 'https://media-exp1.licdn.com/dms/image/C5603AQEj7B8zFc0FyQ/profile-displayphoto-shrink_200_200/0/1562596081607?e=1649894400&v=beta&t=Qxja4Uxjwj-ErQuXZoatfVBiVQXMK71-VeBgl1vnlQY', 'https://www.thisiscolossal.com/wp-content/uploads/2020/07/michele_volpi_2.jpg', 'email@email.com', '@indi_blue_tattoos', 'Independent Artist', 'London', '£150', 'Fineline');
 
 INSERT INTO mvp_artists (first_name, last_name, pronouns, email, instagram, studio, city, pricepoint, style_one)
     VALUES ('Samuel', 'Thomas', 'He/Him', 'email@email.com', '@sam_tattoos', 'Independent Artist', 'London', '£150', 'Neo-traditional');

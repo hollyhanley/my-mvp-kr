@@ -11,7 +11,6 @@ function UserForm({handleChange, handleSubmit, formData }) {
   return (
 
     <div>
-    <h3>Test of Card Grid within form</h3>
           <div className="row">
             <div className="col-sm-6 col-md-4 col-lg-3">
             <div className="card">
@@ -146,9 +145,8 @@ function UserForm({handleChange, handleSubmit, formData }) {
             </div>
           </div>
 
-
-   
-
+      <div className="row">
+      <div className="offset-md-2 col-md-8 offset-lg-3 col-lg-6">
       <div className="UserForm">
       <form onSubmit={handleSubmit}>
           <div class="form-group">
@@ -156,7 +154,7 @@ function UserForm({handleChange, handleSubmit, formData }) {
           <select name="city"
           value={formData.city}
           onChange={handleChange}
-          class="form-control"
+          class="form-control" 
           id="exampleFormControlSelect1">
               <option>Options:</option>
               <option>Belfast</option>
@@ -207,6 +205,9 @@ function UserForm({handleChange, handleSubmit, formData }) {
           type="submit">Find My Ideal Tattoo Artist</button>
       </form>
       </div>
+      </div>
+      </div>
+      
 
     </div>
   );
