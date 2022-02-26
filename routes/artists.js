@@ -5,11 +5,23 @@ const db = require("../model/helper");
 /* GET artists listing. */
 
 router.get("/", function(req, res, next) {
-  db("SELECT * FROM mvp_artists;")
+  // console.log(req.query);
+  let { city, style_one} = req.query;
+  if (city && style_one) {
+    db(`SELECT * FROM mvp_artists WHERE city = '${city}' AND style_one = '${style_one}';`)
+    
+    .then(results => {
+      console.log(results);
+      res.send(results.data);
+    })
+    .catch(err => res.status(500).send(err));
+  } else {
+    db("SELECT * FROM mvp_artists;")
     .then(results => {
       res.send(results.data);
     })
     .catch(err => res.status(500).send(err));
+  }
 });
 
 //get artist by id

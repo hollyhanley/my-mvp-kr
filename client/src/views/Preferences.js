@@ -9,8 +9,7 @@ import UserForm from '../components/UserForm';
     pronouns: "She/Her",
     email: "email@email.com",
     city: "",
-    pricepoint: "",
-    style_one: ""
+    style_one: "",
   };
 
 function Preferences(props) {
@@ -18,9 +17,9 @@ function Preferences(props) {
     // let [user, setUser] = useState(userObj);
     const [formData, setFormData] = useState(userObj);
 
-    useEffect(() => {
-    getUserId();
-    }, []);
+    // useEffect(() => {
+    // getUserId();
+    // }, []);
 
     function handleChange(event) {
         let {name, value} = event.target;
@@ -33,22 +32,22 @@ function Preferences(props) {
         setFormData(userObj);
       }
 
-    async function getUserId(userId) {
-        let options = {
-          method: 'GET',
-        }
-        try {
-            let response = await fetch('/users/1', options);
-            if (response.ok) {
-                let data = await response.json();
-                // setUser(data);
-            } else {
-                console.log('Server error', response.statusText);
-            }
-        } catch (err) {
-            console.log('Network error:', err.message);
-        }
-      }
+    // async function getUserId(userId) {
+    //     let options = {
+    //       method: 'GET',
+    //     }
+    //     try {
+    //         let response = await fetch('/users/1', options);
+    //         if (response.ok) {
+    //             let data = await response.json();
+    //             // setUser(data);
+    //         } else {
+    //             console.log('Server error', response.statusText);
+    //         }
+    //     } catch (err) {
+    //         console.log('Network error:', err.message);
+    //     }
+    //   }
 
 
     async function addPreferences(userPreferences) {

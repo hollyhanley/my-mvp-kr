@@ -6,11 +6,10 @@ CREATE TABLE mvp_users (
     pronouns VARCHAR(50),
     email VARCHAR(100),
     city VARCHAR(100),
-    pricepoint VARCHAR(100),
     style_one VARCHAR(100)
 );
-INSERT INTO mvp_users (first_name, last_name, pronouns, email, city, pricepoint, style_one)
-    VALUES ('Kezi', 'Rose', 'She/Her', 'email@email.com', NULL, NULL, NULL);
+INSERT INTO mvp_users (first_name, last_name, pronouns, email, city, style_one)
+    VALUES ('Kezi', 'Rose', 'She/Her', 'email@email.com', NULL, NULL);
 
 
 DROP TABLE IF EXISTS mvp_artists;
@@ -23,12 +22,12 @@ CREATE TABLE mvp_artists (
     instagram VARCHAR(100),
     studio VARCHAR(100),
     city VARCHAR(100),
-    pricepoint VARCHAR(100),
+    pricepoint VARCHAR(50),
     style_one VARCHAR(100)
 );
 INSERT INTO mvp_artists (first_name, last_name, pronouns, email, instagram, studio, city, pricepoint, style_one)
-    VALUES ('Indigo', 'Erlandsson', 'She/Her', 'email@email.com', '@indi_blue_tattoos', 'Independent Artist', 'London', '£150', 'New School');
+    VALUES ('Indigo', 'Erlandsson', 'She/Her', 'email@email.com', '@indi_blue_tattoos', 'Independent Artist', 'London', '£150', 'Fineline');
 
 INSERT INTO mvp_artists (first_name, last_name, pronouns, email, instagram, studio, city, pricepoint, style_one)
-    VALUES ('Samuel', 'Thomas', 'He/Him', 'email@email.com', '@sam_tattoos', 'Independent Artist', 'London', '£150', 'Portrait');
+    VALUES ('Samuel', 'Thomas', 'He/Him', 'email@email.com', '@sam_tattoos', 'Independent Artist', 'London', '£150', 'Neo-traditional');
     

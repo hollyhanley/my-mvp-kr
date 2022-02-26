@@ -2,13 +2,20 @@ import React from "react";
 
 function ArtistList(props) {
   return (
-    <ul className="ArtistList">
-      {props.theArtists.map(a => (
-        <li key={a.id}>
-          {a.first_name} {a.last_name}, {a.pronouns}, {a.city}, Styles: {a.style_one} {a.style_two} {a.style_three}
-        </li>
+    <div className="ArtistList">
+
+    {props.theArtists.map(a => (
+        
+        <div className="card"key={a.id}>
+          <div class="card-body">
+          <h5 class="card-title">{a.first_name} {a.last_name}, {a.pronouns}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{a.city}</h6>
+          <h6 class="card-subtitle mb-2 text-muted">{a.style_one}</h6>
+          <p class="card-text">Paragraph about artist to put in database later</p>
+        </div>
+        </div>
       ))}
-    </ul>
+      </div>
   );
 }
 

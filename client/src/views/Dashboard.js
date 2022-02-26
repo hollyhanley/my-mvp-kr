@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from "react";
 import ArtistList from "../components/ArtistList";
+import {getUserId} from "../api/user";
 
 function Dashboard(props) {
     let [artists, setArtists] = useState([]);
 
   useEffect(() => { 
-    /* currently loads full artist list. 
-    Want to take updated user info with form preferences on this page
-    Do a compare of data where artist city, price, style matches users city, price, style
-    Would like them in card format to display details with profile pic and photos
-    At top of page will be display of user info - Need to set user state?*/
     getArtists();
   }, []);
 
+// fetch by user id
+
   async function getArtists() {
     try {
-      let response = await fetch("/artists");
+      const user = await getUserId(1);
+      console.log({user})
+      const params = new URLSearchParams({
+        city: user.city,
+        style_one: user.style_one,
+      })
+      let response = await fetch(`/artists?${params}`); //query string params
       if (response.ok) {
         let artists = await response.json();
         setArtists(artists);

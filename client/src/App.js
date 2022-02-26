@@ -11,12 +11,14 @@ export default function App() {
 
   return (
     <div className="App">
+      <div className="container">
       <Navbar/>
       <h1>Welcome to Tattoo Finder</h1>
       <Routes>
         <Route path="/" element ={<Dashboard/>} />
         <Route path="/preferences" element ={<Preferences/>} />
       </Routes>
+      </div>
       
     </div>
   );
