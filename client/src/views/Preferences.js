@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import UserForm from '../components/UserForm';
+import { useNavigate } from "react-router-dom";
 
   
   const userObj = {
@@ -16,6 +17,7 @@ function Preferences(props) {
 
     // let [user, setUser] = useState(userObj);
     const [formData, setFormData] = useState(userObj);
+    const navigate = useNavigate();
 
     // useEffect(() => {
     // getUserId();
@@ -30,6 +32,10 @@ function Preferences(props) {
         event.preventDefault();
         addPreferences(formData);
         setFormData(userObj);
+      }
+
+      function handleClick(event) {
+        navigate('/dashboard');
       }
 
     // async function getUserId(userId) {
@@ -72,7 +78,7 @@ function Preferences(props) {
     return (
         <div className="Preferences">
         <h2>Choose your preferences</h2>
-        <UserForm handleSubmit={handleSubmit} handleChange={handleChange} formData={formData}/>
+        <UserForm handleSubmit={handleSubmit} handleChange={handleChange} formData={formData} handleClick={handleClick}/>
         </div>
     );
 }

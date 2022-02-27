@@ -2,14 +2,25 @@ import React, { useEffect, useState } from "react";
 import ArtistList from "../components/ArtistList";
 import {getUserId} from "../api/user";
 
+const userObj = {
+  id: 1,
+  first_name: "Kezi",
+  last_name: "Rose",
+  pronouns: "She/Her",
+  email: "email@email.com",
+  city: "",
+  style_one: "",
+};
+
 function Dashboard(props) {
+    let [user, setUser] = useState(userObj);
     let [artists, setArtists] = useState([]);
 
   useEffect(() => { 
     getArtists();
   }, []);
 
-// fetch by user id
+// fetch by user id 
 
   async function getArtists() {
     try {
@@ -31,10 +42,19 @@ function Dashboard(props) {
     }
   }
     return (
+      
         <div className="Dashboard">
-        <h2>Your suggested Tattoo Artists</h2>
-        <ArtistList theArtists={artists} />
+          <div className="jumbotron">
+          <h2 className="display-4">Hi, {user.first_name}</h2>
+          <p className="lead">Here are your recommended Tattoo Artists</p>
+          <hr className="my-4"/>
+          <p className="lead">
+          </p>
+          <ArtistList theArtists={artists} />
+          </div>
         </div>
+
+        
     );
 }
 
