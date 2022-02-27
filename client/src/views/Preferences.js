@@ -34,27 +34,9 @@ function Preferences(props) {
         setFormData(userObj);
       }
 
-      function handleClick(event) {
-        navigate('/dashboard');
-      }
-
-    // async function getUserId(userId) {
-    //     let options = {
-    //       method: 'GET',
-    //     }
-    //     try {
-    //         let response = await fetch('/users/1', options);
-    //         if (response.ok) {
-    //             let data = await response.json();
-    //             // setUser(data);
-    //         } else {
-    //             console.log('Server error', response.statusText);
-    //         }
-    //     } catch (err) {
-    //         console.log('Network error:', err.message);
-    //     }
-    //   }
-
+      // function handleClick(event) {
+      //   navigate('/dashboard');
+      // }
 
     async function addPreferences(userPreferences) {
         let options = {
@@ -77,10 +59,10 @@ function Preferences(props) {
 
     return (
         <div className="Preferences">
-        <h2>Choose your preferences</h2>
-        <UserForm handleSubmit={handleSubmit} handleChange={handleChange} formData={formData} handleClick={handleClick}/>
+        <div className="title-banner-middle"><h1>Choose your preferences</h1></div>
+        <UserForm handleSubmit={handleSubmit} handleChange={handleChange} formData={formData}/>
         </div>
     );
 }
-
+// had handleClick={handleClick} above
 export default Preferences;

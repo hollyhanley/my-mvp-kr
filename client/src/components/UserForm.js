@@ -6,7 +6,7 @@ const blankForm = {
   style_one: "",
 };
 
-function UserForm({handleChange, handleSubmit, formData, handleClick }) {
+function UserForm({handleChange, handleSubmit, formData,}) { //had handleClick 
 
   return (
     <div>
@@ -66,8 +66,8 @@ function UserForm({handleChange, handleSubmit, formData, handleClick }) {
 
           <br></br>
 
-          <button onClick={handleClick} className="btn btn-primary formbutton"
-          type="submit">Find My Ideal Tattoo Artist</button>
+          <button className="btn btn-primary formbutton"
+          type="submit">Find My Ideal Tattoo Artist</button> 
           
       </form>
       </div>
@@ -76,5 +76,6 @@ function UserForm({handleChange, handleSubmit, formData, handleClick }) {
     </div>
   );
 }
+// had onClick={handleClick}
   
 export default UserForm;

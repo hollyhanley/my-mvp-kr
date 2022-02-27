@@ -44,15 +44,13 @@ function Dashboard(props) {
     return (
       
         <div className="Dashboard">
-          <div className="jumbotron">
-          <h2 className="display-4">Hi, {user.first_name}</h2>
-          <p className="lead">Here are your recommended Tattoo Artists</p>
-          <hr className="my-4"/>
-          <p className="lead">
-          </p>
+          <div className="title-banner">
+            <h1>Hi, {user.first_name}</h1>
+            <h3>Here are your recommended Tattoo Artists</h3>
+            </div>
           <ArtistList theArtists={artists} />
           </div>
-        </div>
+      
 
         
     );
