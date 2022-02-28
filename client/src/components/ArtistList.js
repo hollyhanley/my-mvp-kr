@@ -3,7 +3,6 @@ import React from "react";
 function ArtistList(props) {
   return (
     <div className="ArtistList">
-
       <div className="row">
         {props.theArtists.map(a => (
           <div className="col-sm-6 col-md-6 col-lg-4">
@@ -16,9 +15,9 @@ function ArtistList(props) {
           <h6 className="card-subtitle mb-2 text-muted">{a.studio}</h6>
           <span className="badge badge-pill badge-primary">{a.city}</span>
           <span className="badge badge-pill badge-primary">{a.style_one}</span>
-          <span className="badge badge-pill badge-primary">{a.pricepoint} per hour</span>
+          <span className="badge badge-pill badge-primary">£{a.pricepoint} per hour</span>
+          <a href="#" className="btn btn-outline-info">Profile</a>
           <a href="#" className="btn btn-outline-info">Message</a>
-          <a href="#" className="btn btn-outline-info">Portfolio</a>
           </div>
           </div>
           </div>

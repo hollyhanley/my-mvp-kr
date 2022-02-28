@@ -17,14 +17,14 @@ function UserForm({handleChange, handleSubmit, formData}) {
       <div className="UserForm">
       <form onSubmit={handleSubmit}>
           <div className="form-group">
-          <label for="exampleFormControlSelect1">Example select</label>
+          <label for="exampleFormControlSelect1">Enter City</label>
           <select name="city"
           value={formData.city}
           onChange={handleChange}
-          className="form-control" 
-          id="exampleFormControlSelect1">
-              <option>Options:</option>
-              <option>Belfast</option>
+          className="form-select" 
+          id="exampleFormControlSelect1" aria-label="Default select example">
+              <option selected>Select</option>
+              <option >Belfast</option>
               <option>Birmingham</option>
               <option>Bristol</option>
               <option>Brighton</option>
@@ -44,13 +44,13 @@ function UserForm({handleChange, handleSubmit, formData}) {
           <br></br>
 
           <div className="form-group">
-          <label for="exampleFormControlSelect1">Choose your style</label>
+          <label for="exampleFormControlSelect1">Choose first style</label>
           <select name="style_one"
           value={formData.style_one}
           onChange={handleChange}
-          className="form-control" 
-          id="exampleFormControlSelect1">
-              <option>Options:</option>
+          className="form-select" 
+          id="exampleFormControlSelect1" aria-label="Default select example">
+              <option selected>Select</option>
               <option>American Traditional</option>
               <option>Black & Grey</option>
               <option>Destrutturato</option>
@@ -68,13 +68,13 @@ function UserForm({handleChange, handleSubmit, formData}) {
           <br></br>
 
           <div className="form-group">
-          <label for="exampleFormControlSelect1">Choose your style</label>
+          <label for="exampleFormControlSelect1">Choose second style</label>
           <select name="style_two"
           value={formData.style_two}
           onChange={handleChange}
-          className="form-control" 
-          id="exampleFormControlSelect1">
-              <option>Options:</option>
+          className="form-select" 
+          id="exampleFormControlSelect1" aria-label="Default select example">
+              <option selected>Select</option>
               <option>American Traditional</option>
               <option>Black & Grey</option>
               <option>Destrutturato</option>
@@ -92,13 +92,13 @@ function UserForm({handleChange, handleSubmit, formData}) {
           <br></br>
 
           <div className="form-group">
-          <label for="exampleFormControlSelect1">Choose your style</label>
+          <label for="exampleFormControlSelect1">Choose third style</label>
           <select name="style_three"
           value={formData.style_three}
           onChange={handleChange}
-          className="form-control" 
-          id="exampleFormControlSelect1">
-              <option>Options:</option>
+          className="form-select" 
+          id="exampleFormControlSelect1" aria-label="Default select example">
+              <option selected>Select</option>
               <option>American Traditional</option>
               <option>Black & Grey</option>
               <option>Destrutturato</option>

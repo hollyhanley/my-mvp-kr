@@ -3,15 +3,7 @@ import ArtistList from "../components/ArtistList";
 import {getUserId} from "../api/user";
 
 const userObj = {
-  id: 1,
-  first_name: "Kezi",
-  last_name: "Rose",
-  pronouns: "She/Her",
-  email: "email@email.com",
-  city: "",
-  style_one: "",
-  style_two: "",
-  style_three: ""
+  first_name: "Kezi"
 };
 
 function Dashboard(props) {
@@ -23,7 +15,6 @@ function Dashboard(props) {
   }, []);
 
 // fetch by user id 
-
   async function getArtists() {
     try {
       const user = await getUserId(1);
@@ -46,7 +37,6 @@ function Dashboard(props) {
     }
   }
     return (
-      
         <div className="Dashboard">
           <div className="title-banner">
             <h1>Hi, {user.first_name}</h1>
@@ -55,9 +45,6 @@ function Dashboard(props) {
           <ArtistList theArtists={artists} />
           <a className="btn btn-primary" href="/preferences" role="button">Change Preferences</a>
           </div>
-      
-
-        
     );
 }
 

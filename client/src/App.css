@@ -54,6 +54,14 @@
   border-top-right-radius: 12px;
 }
 
+.carousel-item {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
 .card {
   margin: 10px;
   margin-bottom: 30px;
@@ -76,30 +84,36 @@ h2 {
 }
 
 .badge {
-  background-color: rgb(147, 147, 236);
+  background-color: rgb(59, 59, 201);
   margin: 4px;
   border-radius: 32px;
 }
 
 .btn {
   width: 260px;
-  background-color: rgb(147, 147, 236);
-  border-color: rgb(147, 147, 236);
+  background-color: rgb(59, 59, 201);
+  border-color: rgb(59, 59, 201);
   border-radius: 32px;
   padding: 6px;
+}
+
+.btn:hover {
+  background-color: rgb(14, 14, 40);
+  color: white;
+  border-color: rgb(14, 14, 40);
 }
 
 .btn-outline-info,
 .btn-info {
   width: 100px;
   background-color: white;
-  border-color: rgb(147, 147, 236);
-  color: rgb(147, 147, 236);
+  border-color: rgb(59, 59, 201);
+  color: rgb(59, 59, 201);
   margin: 6px;
 }
 
 .btn-outline-info:hover {
-  background-color: rgb(147, 147, 236);
+  background-color: rgb(59, 59, 201);
   color: white;
   border: 0;
 }
@@ -117,12 +131,13 @@ h3 {
 }
 
 .title-banner-middle {
-  margin-bottom: 160px;
+  margin-bottom: 80px;
 }
 
 form {
   margin-top: 20px;
 }
 
-
-
+.home-info {
+  margin-top: 80px;
+}
