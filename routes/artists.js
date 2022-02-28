@@ -3,13 +3,11 @@ var router = express.Router();
 const db = require("../model/helper");
 
 /* GET all artists that match user city and user style preferences */
-
 router.get("/", function(req, res, next) {
   // console.log(req.query);
-  let { city, style_one} = req.query;
-  if (city && style_one) {
-    db(`SELECT * FROM mvp_artists WHERE city = '${city}' AND style_one = '${style_one}';`)
-    
+  let { city, style_one, style_two, style_three} = req.query;
+  if (city && style_one && style_two && style_three) {
+    db(`SELECT * FROM mvp_artists WHERE city = '${city}' AND style_one = '${style_one}' OR style_one = '${style_two}' OR style_one = '${style_three}';`)
     .then(results => {
       console.log(results);
       res.send(results.data);
@@ -25,10 +23,8 @@ router.get("/", function(req, res, next) {
 });
 
 //get artist by id
-
 router.get("/:id", async (req, res, next) => {
     let { id } = req.params;
-  
     try {
       let result = await db(`SELECT * FROM mvp_artists WHERE id = ${id}`);
       let artist = result.data;
@@ -44,10 +40,8 @@ router.get("/:id", async (req, res, next) => {
 
 
 //get all artists from 'user_faves' table by if 'user_id' matches 'id' from 'mvp_users'
-
 router.get("/:id", async (req, res, next) => {
   let { id } = req.params; // mvp_users id
-
   try {
     let result = await db(`SELECT fave_artists_id FROM user_faves WHERE user_id = ${id}`); 
     //eg select all artists from user_faves table where 'user_id' is 1 and 'id' is 1

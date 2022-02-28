@@ -11,6 +11,8 @@ import { useNavigate } from "react-router-dom";
     email: "email@email.com",
     city: "",
     style_one: "",
+    style_two: "",
+    style_three: ""
   };
 
 function Preferences(props) {

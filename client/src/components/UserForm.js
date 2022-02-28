@@ -4,6 +4,8 @@ import React, { useState } from "react";
 const blankForm = {
   city: "",
   style_one: "",
+  style_two: "",
+  style_three: ""
 };
 
 function UserForm({handleChange, handleSubmit, formData}) {
@@ -63,7 +65,54 @@ function UserForm({handleChange, handleSubmit, formData}) {
               <option>Watercolour</option>
           </select>
           </div>
+          <br></br>
 
+          <div className="form-group">
+          <label for="exampleFormControlSelect1">Choose your style</label>
+          <select name="style_two"
+          value={formData.style_two}
+          onChange={handleChange}
+          className="form-control" 
+          id="exampleFormControlSelect1">
+              <option>Options:</option>
+              <option>American Traditional</option>
+              <option>Black & Grey</option>
+              <option>Destrutturato</option>
+              <option>Etching/ Woodcut</option>
+              <option>Fineline</option>
+              <option>Geometric</option>
+              <option>Handpoke</option>
+              <option>Japanese</option>
+              <option>Lettering</option>
+              <option>Neo-traditional</option>
+              <option>Trash Polka</option>
+              <option>Watercolour</option>
+          </select>
+          </div>
+          <br></br>
+
+          <div className="form-group">
+          <label for="exampleFormControlSelect1">Choose your style</label>
+          <select name="style_three"
+          value={formData.style_three}
+          onChange={handleChange}
+          className="form-control" 
+          id="exampleFormControlSelect1">
+              <option>Options:</option>
+              <option>American Traditional</option>
+              <option>Black & Grey</option>
+              <option>Destrutturato</option>
+              <option>Etching/ Woodcut</option>
+              <option>Fineline</option>
+              <option>Geometric</option>
+              <option>Handpoke</option>
+              <option>Japanese</option>
+              <option>Lettering</option>
+              <option>Neo-traditional</option>
+              <option>Trash Polka</option>
+              <option>Watercolour</option>
+          </select>
+          </div>
           <br></br>
 
           <button className="btn btn-primary formbutton"

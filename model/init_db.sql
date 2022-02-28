@@ -6,10 +6,12 @@ CREATE TABLE mvp_users (
     pronouns VARCHAR(50),
     email VARCHAR(100),
     city VARCHAR(100),
-    style_one VARCHAR(100)
+    style_one VARCHAR(100),
+    style_two VARCHAR(100),
+    style_three VARCHAR(100)
 );
-INSERT INTO mvp_users (first_name, last_name, pronouns, email, city, style_one)
-    VALUES ('Kezi', 'Rose', 'She/Her', 'email@email.com', NULL, NULL);
+INSERT INTO mvp_users (first_name, last_name, pronouns, email, city, style_one, style_two, style_three)
+    VALUES ('Kezi', 'Rose', 'She/Her', 'email@email.com', NULL, NULL, NULL, NULL);
 
 
 DROP TABLE IF EXISTS mvp_artists;

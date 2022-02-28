@@ -10,6 +10,8 @@ const userObj = {
   email: "email@email.com",
   city: "",
   style_one: "",
+  style_two: "",
+  style_three: ""
 };
 
 function Dashboard(props) {
@@ -25,10 +27,12 @@ function Dashboard(props) {
   async function getArtists() {
     try {
       const user = await getUserId(1);
-      console.log({user})
+      // console.log({user})
       const params = new URLSearchParams({
         city: user.city,
         style_one: user.style_one,
+        style_two: user.style_two,
+        style_three: user.style_three,
       })
       let response = await fetch(`/artists?${params}`); //query string params
       if (response.ok) {

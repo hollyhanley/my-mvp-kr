@@ -37,7 +37,7 @@ router.put("/:id", async (req, res) => {
     let result = await db(`SELECT * FROM mvp_users WHERE id = ${id}`);
 
     if (result.data.length === 1) {
-      let { first_name, last_name, pronouns, email, city, style_one} = req.body;
+      let { first_name, last_name, pronouns, email, city, style_one, style_two, style_three} = req.body;
       let sql = `
       UPDATE mvp_users
       SET first_name = '${first_name}', 
@@ -45,7 +45,9 @@ router.put("/:id", async (req, res) => {
       pronouns = '${pronouns}',
       email = '${email}',
       city = '${city}',
-      style_one = '${style_one}' 
+      style_one = '${style_one}' ,
+      style_two = '${style_two}',
+      style_three = '${style_three}'
       WHERE id = ${id}`
       // Do the update
       await db(sql);
