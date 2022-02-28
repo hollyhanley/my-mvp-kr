@@ -49,6 +49,7 @@ function Dashboard(props) {
             <h3>Here are your Tattoo Artist matches</h3>
             </div>
           <ArtistList theArtists={artists} />
+          <a className="btn btn-primary" href="/preferences" role="button">Change Preferences</a>
           </div>
       
 
