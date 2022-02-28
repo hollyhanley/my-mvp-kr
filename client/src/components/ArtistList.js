@@ -4,10 +4,10 @@ function ArtistList(props) {
   return (
     <div className="ArtistList">
 
-    {props.theArtists.map(a => (
       <div className="row">
-        <div className="col-sm-6 col-md-3 col-lg-4">
-        <div className="card" key={a.id}>
+        {props.theArtists.map(a => (
+          <div className="col-sm-6 col-md-6 col-lg-4">
+          <div key={a.id} className="card">
           <img className="card-img-top artist" src={a.cover_photo} alt="Profile Picture"></img>
           <div className="card-body text-center">
           <img className="avatar rounded-circle" src={a.profile_pic} alt="Profile Picture"/>
@@ -21,10 +21,10 @@ function ArtistList(props) {
           <a href="#" className="btn btn-outline-info">Portfolio</a>
           </div>
           </div>
-        </div>
-        </div>
-        
+          </div>
       ))}
+          
+        </div>
       </div>
   );
 }

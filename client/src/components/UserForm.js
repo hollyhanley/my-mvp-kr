@@ -6,7 +6,7 @@ const blankForm = {
   style_one: "",
 };
 
-function UserForm({handleChange, handleSubmit, formData,}) { //had handleClick 
+function UserForm({handleChange, handleSubmit, formData}) {
 
   return (
     <div>
@@ -14,12 +14,12 @@ function UserForm({handleChange, handleSubmit, formData,}) { //had handleClick
       <div className="offset-md-2 col-md-8 offset-lg-3 col-lg-6">
       <div className="UserForm">
       <form onSubmit={handleSubmit}>
-          <div class="form-group">
+          <div className="form-group">
           <label for="exampleFormControlSelect1">Example select</label>
           <select name="city"
           value={formData.city}
           onChange={handleChange}
-          class="form-control" 
+          className="form-control" 
           id="exampleFormControlSelect1">
               <option>Options:</option>
               <option>Belfast</option>
@@ -41,12 +41,12 @@ function UserForm({handleChange, handleSubmit, formData,}) { //had handleClick
           </div>
           <br></br>
 
-          <div class="form-group">
+          <div className="form-group">
           <label for="exampleFormControlSelect1">Choose your style</label>
           <select name="style_one"
           value={formData.style_one}
           onChange={handleChange}
-          class="form-control" 
+          className="form-control" 
           id="exampleFormControlSelect1">
               <option>Options:</option>
               <option>American Traditional</option>
@@ -76,6 +76,5 @@ function UserForm({handleChange, handleSubmit, formData,}) { //had handleClick
     </div>
   );
 }
-// had onClick={handleClick}
   
 export default UserForm;

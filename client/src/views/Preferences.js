@@ -31,6 +31,7 @@ function Preferences(props) {
       function handleSubmit(event) {
         event.preventDefault();
         addPreferences(formData);
+        navigate('/dashboard');
         setFormData(userObj);
       }
 

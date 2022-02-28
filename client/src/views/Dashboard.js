@@ -46,7 +46,7 @@ function Dashboard(props) {
         <div className="Dashboard">
           <div className="title-banner">
             <h1>Hi, {user.first_name}</h1>
-            <h3>Here are your recommended Tattoo Artists</h3>
+            <h3>Here are your Tattoo Artist matches</h3>
             </div>
           <ArtistList theArtists={artists} />
           </div>
