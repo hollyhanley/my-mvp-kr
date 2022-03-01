@@ -3,6 +3,14 @@
     padding-right: 16px;
     padding-top: 10px;
     padding-bottom: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     background-color: rgb(59, 59, 201);
+  }
+
+  .navbar-brand {
+    font-family: "Archivo Black", "Sans-serif";
+  }
+
+  .nav-item:active {
+    color: rgb(59, 59, 201);
   }

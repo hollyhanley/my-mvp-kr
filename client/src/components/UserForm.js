@@ -75,6 +75,7 @@ function UserForm({handleChange, handleSubmit, formData}) {
           className="form-select" 
           id="exampleFormControlSelect1" aria-label="Default select example">
               <option selected>Select</option>
+              <option>None</option>
               <option>American Traditional</option>
               <option>Black & Grey</option>
               <option>Destrutturato</option>
@@ -99,6 +100,7 @@ function UserForm({handleChange, handleSubmit, formData}) {
           className="form-select" 
           id="exampleFormControlSelect1" aria-label="Default select example">
               <option selected>Select</option>
+              <option>None</option>
               <option>American Traditional</option>
               <option>Black & Grey</option>
               <option>Destrutturato</option>
