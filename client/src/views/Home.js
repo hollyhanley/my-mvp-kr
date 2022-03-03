@@ -13,6 +13,8 @@ function Home(props) {
         <a className="btn btn-primary homebutton" href="/preferences" role="button">Find your ideal Tattoo Artist</a>
         <br></br>
         <a className="btn btn-primary homebutton" href="/dashboard" role="button">Dashboard</a>
+        <br></br>
+        <a className="btn btn-primary homebutton" href="/mapsearch" role="button">Map Search</a>
         </div>
 
         <div class="split left">

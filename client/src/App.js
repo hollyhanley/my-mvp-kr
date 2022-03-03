@@ -7,6 +7,7 @@ import Dashboard from "./views/Dashboard";
 import Preferences from "./views/Preferences";
 import Explore from "./views/Explore";
 import Home from "./views/Home";
+import MapSearch from "./views/MapSearch";
 
 export default function App() {
 
@@ -19,6 +20,7 @@ export default function App() {
         <Route path="explore" element ={<Explore/>} />
         <Route path="/preferences" element ={<Preferences/>} />
         <Route path="/dashboard" element ={<Dashboard/>} />
+        <Route path="/mapsearch" element ={<MapSearch/>} />
       </Routes>
       </div>
       
