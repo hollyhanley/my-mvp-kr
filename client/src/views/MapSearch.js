@@ -1,7 +1,11 @@
 import React from 'react'
+import './MapSearch.css'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 export default function MapSearch() {
+  <input>
+    Which city are you in?
+  </input>
   return (
     <MapContainer center={[51.505, -0.09]} zoom={13}>
     <TileLayer
@@ -14,17 +18,7 @@ export default function MapSearch() {
       </Popup>
     </Marker>
   </MapContainer>
-//     <MapContainer className="MapSearch" center={[51.505, -0.09]} zoom={13}>
-//         <TileLayer
-//             attribution="(credits to tile server)"
-//             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-//         />
 
-//         <Marker position={[51.505, -0.09]} >
-//             <Popup>Auto Center</Popup>
-//         </Marker>
-
-//     </MapContainer>
 );
 }
 
