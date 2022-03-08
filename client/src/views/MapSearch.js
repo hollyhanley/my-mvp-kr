@@ -1,26 +1,59 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './MapSearch.css'
+import {getArtists} from './Dashboard'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
 export default function MapSearch() {
+  const [artistsByLocation, setArtistsByLocations] = useState([]);
+  async function getArtistsByLocation() {
+    console.log('this is working');
+    try {
+      let response = await fetch("/artists?city=London")
+      if (response.ok) {
+        let data = await response.json();
+        setArtistsByLocations(data);
+        console.log(data[0].longlat.split(','))
+      }
+    } catch (e) {
+      console.log("network error:", e.message);
+    }
+  }
+
+  useEffect(() => {
+    getArtistsByLocation()
+  }, []);
+
   return (
     <div>
       <label>
-      Which city are you in?
+      Switch to Bristol?    
       </label>
-      <input />
-      <button>Submit</button>
+      <br />
+      <br />
+      <a href="/bristolmapview" class="btn btn-primary">Bristol</a>
+      <br />
+      <br />
       
     <MapContainer center={[51.505, -0.09]} zoom={13}>
     <TileLayer
       attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
       url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
     />
-    <Marker position={[51.505, -0.09]}>
+
+
+    {/* <Marker position={[51.505, -0.09]}>
       <Popup>
         A pretty CSS3 popup. <br /> Easily customizable.
       </Popup>
+    </Marker> */}
+
+    {artistsByLocation.map((artist) => (
+    <Marker position={artist.longlat.split(',')}>
+      <Popup class="text-center">
+       `{artist.first_name} {artist.last_name} @ {artist.studio} <br /> {artist.instagram}`
+      </Popup>
     </Marker>
+))}
   </MapContainer>
   </div>
 
